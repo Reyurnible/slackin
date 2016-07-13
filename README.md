@@ -1,6 +1,7 @@
-# slackin
+# slackin-private
 
-A little server that enables public access to a Slack server. Like Freenode, but on Slack.
+A little server that enables private access to a Slack server.
+This app is add authonication for slackin.
 
 It provides
 
@@ -21,18 +22,13 @@ Read more about the [motivations and history](http://rauchg.com/slackin) behind 
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Reyurnible/slackin/tree/master)
 
-##### IBM Bluemix
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/rauchg/slackin)
-
-For other CloudFoundry providers, [follow these instructions.](https://github.com/pivotal-cf/slackin/wiki/Cloud-Foundry)
-
 #### Custom
 
 Install it and launch it on your server:
 
 ```bash
 $ npm install -g slackin
-$ slackin "your-team-id" "your-slack-token"
+$ slackin "your-team-id" "your-slack-token" "basic-auth"
 ```
 
 Your team id is what you use to access your login page on Slack (eg: https://**{this}**.slack.com).
@@ -56,6 +52,12 @@ Options:
   -P, --path                 Path to serve slackin under
   -s, --silent               Do not print out warns or errors
   -c, --css <file>           Full URL to a custom CSS file to use on the main page
+```
+
+Basic auth format.
+
+```
+username:password
 ```
 
 **Important: if you use Slackin in single-channel mode, you'll only be
@@ -138,6 +140,8 @@ files in lib/ to update the versions in node/.
 
 ## Credits
 
+- The slack in site based on
+[Slackin](http://rauchg.com/slackin/)
 - The SVG badge generation was taken from the
 excellent [shields](https://github.com/badges/shields) project.
 - The button CSS is based on
