@@ -19,17 +19,7 @@ Read more about the [motivations and history](http://rauchg.com/slackin) behind 
 
 #### Heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/rauchg/slackin/tree/master)
-
-#### Azure
-
-[![Deploy to Azure](http://azuredeploy.net/deploybutton.svg)](https://azuredeploy.net/)
-
-#### OpenShift
-
-[Follow these instructions.](https://github.com/rauchg/slackin/wiki/OpenShift)
-
-#### Cloud Foundry
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Reyurnible/slackin/tree/master)
 
 ##### IBM Bluemix
 [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/rauchg/slackin)
