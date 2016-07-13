@@ -23,6 +23,9 @@ var flags = args.parse(process.argv, {
 var org = args.sub[0] || process.env.SLACK_SUBDOMAIN;
 var token = args.sub[1] || process.env.SLACK_API_TOKEN;
 
+// Auth
+var basicAuth = args.sub[2] || process.env.BASIC_AUTH;
+
 if (flags.help) {
   args.showHelp();
 }
@@ -32,6 +35,12 @@ if (!org || !token) {
 } else {
   flags.org = org;
   flags.token = token;
+}
+
+if(basicAuth && basicAuth.split(":").length == 2) {
+  var authParams = basicAuth.split(":");
+  flags.authUser = authParams[0];
+  flags.authPass = authParams[1];
 }
 
 var port = flags.port;
